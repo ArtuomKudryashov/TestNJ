@@ -1,7 +1,12 @@
 package PageObjectsTest;
 
+import enums.BrowserType;
+import helpers.BrowserFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,8 +20,18 @@ public class BaseTest {
     public void starUp() {
         username= "academic198405@gmail.com";
         password = "te$t$tudent";
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        WebDriverManager.firefoxdriver().setup();
+//        driver = new FirefoxDriver();
+//        WebDriverManager.edgedriver().setup();
+//        driver = new EdgeDriver();
+                //1)Chrome драйвер который  мы закачали нам больше не нужен
+                 // 2) можем закоментить, потому что  в  BrowserFactory написали switch
+        // и заменяем на одну строчку
+        driver = BrowserFactory.getDriver(BrowserType.EDGE);
+
 
     }
 

@@ -60,7 +60,7 @@ public class PlayListTest extends BaseTest {
         String newPlaylistName = faker.artist().name();
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
-        Assert.assertTrue(mainPage.checkPlaylist(playlistId, playlistName));
+        Assert.assertTrue(mainPage.checkPlaylist(playlistId, newPlaylistName));
     }
     @Test
     public void playListTests_renameOldPlayList_playlistrenaimed() throws InterruptedException {
@@ -83,7 +83,7 @@ public class PlayListTest extends BaseTest {
         String newPlaylistName = faker.artist().name();
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
-//        Assert.assertTrue(mainPage.checkPlaylist(playlistId, playlistName));
+        Assert.assertTrue(mainPage.checkPlaylist(playlistId, newPlaylistName));
     }
 
 }

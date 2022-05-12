@@ -71,8 +71,8 @@ public class MainPage extends BasePage {
 
 
     public boolean checkPlaylist(String playlistId, String playlistName) {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        By playlistBy = getPlaylistBy(playlistId);
+        JavascriptExecutor jse = (JavascriptExecutor) driver;// Cоздается объект который будет прокручивать
+        By playlistBy = getPlaylistBy(playlistId);           //
         WebElement playList = driver.findElement(playlistBy);
 
         jse.executeScript("arguments[0].scrollIntoView();", playList);
