@@ -30,7 +30,7 @@ public class BaseTest {
                 //1)Chrome драйвер который  мы закачали нам больше не нужен
                  // 2) можем закоментить, потому что  в  BrowserFactory написали switch
         // и заменяем на одну строчку
-        driver = BrowserFactory.getDriver(BrowserType.EDGE);
+        driver = BrowserFactory.getDriver(BrowserType.FIREFOX);
 
 
     }
