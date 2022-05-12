@@ -82,6 +82,7 @@ public class PlayListTest extends BaseTest {
         String playlistId = mainPage.createPlaylist(playlistName);
         String newPlaylistName = faker.artist().name();
         mainPage.renamePlaylist(playlistId,newPlaylistName);
+        System.out.println("Artuom");
 
         Assert.assertTrue(mainPage.checkPlaylist(playlistId, newPlaylistName));
     }
