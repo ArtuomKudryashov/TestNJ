@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TestNJ" />
         <module name="PageObject" />
+        <module name="TestNJ - Copy" />
       </profile>
     </annotationProcessing>
   </component>
